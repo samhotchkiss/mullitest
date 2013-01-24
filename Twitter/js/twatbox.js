@@ -37,7 +37,7 @@ jQuery(function($) {
 		twit += '		<span class="text">';
 		twit += '			'+status_text;
 		twit += '		</span>';
-		twit += '		<span class="post_info">Posted on: '+status.created_at+' <a href="http://www.twitter.com/'+status.user.screen_name+'" target="_blank" onClick="loadBackground('+status.user.profile_background_image_url+')" ><img src="css/drop_box.gif" title="Load this user\' background image in this page."/></a></span>';
+		twit += '		<span class="post_info">Posted on: '+status.created_at+' <a href="http://www.twitter.com/'+status.user.screen_name+'" target="_blank" onclick="loadBackground(\''+status.user.profile_background_image_url+'\'); return false;" ><img src="css/drop_box.gif" title="Load this user\' background image in this page."/></a></span>';
 		twit += '</div>';
 		
 		// Retrun this new HTML object
@@ -45,11 +45,11 @@ jQuery(function($) {
 	
 	}
 	
-	function loadBackground($url) {
-		if($('body').css('background-image') == 'url('+$url+')')
+	function loadBackground(url) {
+		if($('body').css('background-image') === 'url('+url+')')
 			$('body').css('background-image', '');
 		else
-			$('body').css('background-image', 'url('+$url+')');
+			$('body').css('background-image', 'url('+url+')');
 	}
 	
 	// Reload every 10 seconds.
