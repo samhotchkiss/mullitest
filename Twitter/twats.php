@@ -56,11 +56,12 @@
 					print $status_text; ?>
 					
 				</span>
-				<span class="post_time">Posted on: <? 
+				<span class="post_info">Posted on: <? 
 					print $status['created_at'] 	// I am going to say this once, here: 
 													// I know this is in UTC.
 													// Yes I could change it to local time.
-													// That's not the point. ?></span>
+													// That's not the point. ?> <a href="http://www.twitter.com/<? print $status['user']['screen_name'] ?>" target="_blank" onclick="loadBackground('<? print $status['user']['profile_background_image_url'] ?>', '<? print $status['user']['profile_background_color'] ?>', <? print ($status['user']['profile_background_tile']) ? 'true' : 'false';  ?>); return false;" ><img src="css/drop_box.gif" title="Load this user\' background image in this page."/></a></span>;
+
 			</span>
 		</div>
 	</div>
