@@ -1,3 +1,12 @@
+body {
+	background: top center;
+}
+
+h2 {
+	background: white;
+	padding: 6px;
+}
+
 #twats {
 	width: 400px;
 }
@@ -13,6 +22,13 @@
 	min-height: 60px;
 	width: auto;
 	border: 1px solid #000;
+	
+	-moz-box-shadow: 3px 3px 4px #FFF;
+	-webkit-box-shadow: 3px 3px 4px #FFF;
+	box-shadow: 3px 3px 4px #FFF;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#FFFFFF')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#FFFFFF');
+
 }
 
 .user img{
