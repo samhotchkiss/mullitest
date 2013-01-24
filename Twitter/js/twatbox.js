@@ -53,7 +53,9 @@ jQuery(function($) {
 		if (!tile)
 			bkg = bkg + ' no-repeat';
 		
-		if($('body').css('background') == bkg)
+		console.log($('body').css('background'));
+		
+		if($('body').css('background-image') == 'url('+url+')')
 			bkg = '';
 		
 		$('body').css('background', bkg);
