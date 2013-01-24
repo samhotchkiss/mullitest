@@ -45,7 +45,7 @@ a.twit_link {
 	content: " -> ";
 }
 
-.post_time {
+.post_info {
 	position: absolute;
 	bottom: -2px;
 	right: 6px;

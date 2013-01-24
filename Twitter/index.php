@@ -15,6 +15,7 @@ include("lib/Twatter.php");
 session_start();
 define(SEP, '/');
 
+// I was hard-codeing the username/passowrd.  This is much more secure...  You know...  Relatively.
 if(!isset($_SESSION['u']) || !isset($_SESSION['p'])) {
 	if (isset($_POST['u']) && isset($_POST['p'])) {
 		$_SESSION['u'] = $_POST['u'];
@@ -25,7 +26,7 @@ if(!isset($_SESSION['u']) || !isset($_SESSION['p'])) {
 	}
 }
 
-$twat = new Twatter($_SESSION['u'], $_SESSION['p']);	// Now you know my Twitter Password, bastard...
+$twat = new Twatter($_SESSION['u'], $_SESSION['p']);
 $twat->set_template('twats.php');									
 
 $twat->consume(false);									// Consume without reconnect.
